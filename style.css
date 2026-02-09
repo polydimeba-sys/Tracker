@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.report-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.progress-container {
+    background: #e5e7eb;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.progress-bar {
+    height: 18px;
+    width: 40%;
+    background: #f59e0b;
+    border-radius: 5px;
+}
+
+.progress-bar.finished {
+    width: 100%;
+    background: #16a34a;
+}

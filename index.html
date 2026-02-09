@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracker 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="card" id="loginCard">
+    <h2>Login</h2>
+    <label>Select User</label>
+    <select id="username">
+        <option value="">-- Select User --</option>
+        <option>Akalanka</option>
+        <option>Milinda</option>
+        <option>Sandaruwan</option>
+        <option>Sanju</option>
+        <option>Nadeesha</option>
+    </select>
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- TRACKER -->
+<div class="card hidden" id="trackerCard">
+    <h2>Tracker 2026</h2>
+    <p><strong>User:</strong> <span id="userDisplay"></span></p>
+
+    <!-- FOLDERS -->
+    <h3>Folder Names</h3>
+    <div class="checkbox-group" id="folderGroup"></div>
+
+    <!-- REPORTS -->
+    <h3>Report Names</h3>
+    <div class="checkbox-group" id="reportGroup"></div>
+
+    <!-- TYPE -->
+    <h3>Type</h3>
+    <div class="checkbox-group">
+        <label><input type="checkbox" value="Final"> Final</label>
+        <label><input type="checkbox" value="Supporting"> Supporting</label>
+    </div>
+
+    <!-- FREQUENCY -->
+    <h3>Frequency</h3>
+    <div class="checkbox-group">
+        <label><input type="checkbox" value="Weekly"> Weekly</label>
+        <label><input type="checkbox" value="Monthly"> Monthly</label>
+        <label><input type="checkbox" value="Quarterly"> Quarterly</label>
+        <label><input type="checkbox" value="Annually"> Annually</label>
+        <label><input type="checkbox" value="Addhoc"> Addhoc</label>
+    </div>
+
+    <!-- MONTH -->
+    <h3>Month</h3>
+    <div>
+    <select id="monthSelect">
+        <option value="">-- Select Month --</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+    </select>
+    </div>
+
+    <!-- DATE -->
+    <h3>Report Date</h3>
+    <div><input type="date" id="reportDate"></div>
+
+    <button onclick="addReports()">Add Reports</button>
+
+    <div id="reportProgressArea"></div>
+
+    <button onclick="saveToExcel()">Save to Excel</button>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
